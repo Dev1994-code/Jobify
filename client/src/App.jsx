@@ -79,6 +79,7 @@ const router = createBrowserRouter([
             path: "stats",
             element: <Stats />,
             loader: statsLoader,
+            errorElement: <ErrorElement />,
           },
           {
             path: "all-jobs",
@@ -112,8 +113,8 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />;
       <ReactQueryDevtools initialIsOpen={false} />
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 };
