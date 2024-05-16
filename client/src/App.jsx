@@ -79,7 +79,7 @@ const router = createBrowserRouter([
             path: "stats",
             element: <Stats />,
             loader: statsLoader,
-            errorElement: <ErrorElement />,
+            errorElement: <h4>There was an error...</h4>, //<ErrorElement />,
           },
           {
             path: "all-jobs",
